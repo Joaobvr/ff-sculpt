@@ -55,8 +55,7 @@ const UrgencySection = () => {
                     Pré-Agendamentos Abertos
                   </h4>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    A nova máquina está chegando e já estamos aceitando pré-agendamentos
-                    para garantir sua vaga prioritária.
+                    Preencha o cadastro e aguarde minha equipe entrar em contato.
                   </p>
                 </div>
               </div>
@@ -71,8 +70,7 @@ const UrgencySection = () => {
                   ⚡ Vagas Limitadas
                 </p>
                 <p className="text-sm text-muted-foreground mt-1">
-                  Garanta sua pré-avaliação agora e seja uma das primeiras a experimentar
-                  essa tecnologia em Goiânia.
+                  Faça sua pré-avaliação agora e garanta sua consulta.
                 </p>
               </motion.div>
             </div>

@@ -8,7 +8,7 @@ const credentials = [
   {
     icon: GraduationCap,
     title: "Formação Médica Completa",
-    description: "Graduação em Medicina com pós-graduação em Ginecologia e Saúde da Mulher",
+    description: "Médica com pós-graduação em Ginecologia (não especialista) com cursos em emagrecimento e estética",
   },
   {
     icon: Heart,
@@ -17,13 +17,13 @@ const credentials = [
   },
   {
     icon: Award,
-    title: "Credenciamento Exclusivo",
-    description: "Uma das únicas duas médicas credenciadas na técnica em Goiânia",
+    title: "Tratamento Exclusivo",
+    description: "Uma das poucas médicas do Brasil que dominam a técnica FFSculpt",
   },
   {
     icon: UserCheck,
-    title: "Atendimento Premium",
-    description: "Abordagem personalizada com foco no bem-estar e resultados duradouros",
+    title: "Tratamento integral",
+    description: "Tratamento personalizado avaliando a necessidade do paciente e com indicação individual",
   },
 ];
 
@@ -63,7 +63,7 @@ const DoctorSection = () => {
                   Dra. Isabella Rodrigues Tovar
                 </p>
                 <p className="text-xs text-muted-foreground text-center mt-1">
-                  Médica Especialista em Estética
+                  Saúde, Estética e Bem Estar
                 </p>
               </motion.div>
             </div>
