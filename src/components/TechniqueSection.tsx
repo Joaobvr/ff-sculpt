@@ -1,0 +1,102 @@
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
+import { Sparkles, ShieldCheck, FlaskConical, TrendingUp } from "lucide-react";
+
+const features = [
+  {
+    icon: Sparkles,
+    title: "Técnica Patenteada",
+    description:
+      "Método exclusivo desenvolvido no Brasil, com protocolo protegido por patente nacional.",
+  },
+  {
+    icon: TrendingUp,
+    title: "Resultados Superiores",
+    description:
+      "Eficiência comprovada em gordura localizada, com resultados visíveis já nas primeiras semanas.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Segurança Médica",
+    description:
+      "Procedimento realizado exclusivamente por médica especializada, garantindo máxima segurança.",
+  },
+  {
+    icon: FlaskConical,
+    title: "Base Científica",
+    description:
+      "Fundamentado em estudos clínicos e evidências científicas internacionais.",
+  },
+];
+
+const TechniqueSection = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  return (
+    <section ref={ref} className="section-padding bg-card">
+      <div className="container-wide">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
+          className="text-center max-w-3xl mx-auto mb-16"
+        >
+          <span className="text-accent font-medium text-sm uppercase tracking-wider">
+            Tecnologia Exclusiva
+          </span>
+          <h2 className="heading-section mt-4 mb-6">
+            O que é essa técnica exclusiva de criolipólise?
+          </h2>
+          <div className="divider-elegant" />
+          <p className="text-elegant mt-6">
+            Esta técnica revolucionária é única no Brasil. Desenvolvida com tecnologia
+            patenteada, oferece resultados significativamente superiores na eliminação
+            de gordura localizada, com total segurança por ser realizada exclusivamente
+            por médicos credenciados.
+          </p>
+        </motion.div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {features.map((feature, index) => (
+            <motion.div
+              key={feature.title}
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="card-elegant text-center group"
+            >
+              <div className="w-14 h-14 mx-auto mb-5 bg-secondary rounded-xl flex items-center justify-center group-hover:bg-primary/10 transition-colors duration-300">
+                <feature.icon className="w-7 h-7 text-primary" />
+              </div>
+              <h3 className="font-display text-lg font-medium text-foreground mb-3">
+                {feature.title}
+              </h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                {feature.description}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="mt-12 p-6 md:p-8 bg-primary/5 rounded-2xl border border-primary/10"
+        >
+          <p className="text-center text-foreground leading-relaxed">
+            <span className="font-semibold text-accent">Alta demanda nacional:</span>{" "}
+            A exclusividade da técnica e os resultados comprovados geraram uma procura
+            crescente em todo o Brasil. Em Goiânia, a Dra. Isabella é uma das apenas{" "}
+            <span className="font-semibold">duas médicas credenciadas</span> para
+            realizar este procedimento.
+          </p>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+export default TechniqueSection;
