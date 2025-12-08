@@ -14,19 +14,19 @@ const features = [
     icon: TrendingUp,
     title: "Resultados Superiores",
     description:
-      "Eficiência comprovada em gordura localizada, com resultados visíveis já nas primeiras semanas.",
+      "Eficiência e segurança comprovada com resultados visíveis já nas primeiras semanas.",
   },
   {
     icon: ShieldCheck,
     title: "Segurança Médica",
     description:
-      "Procedimento realizado exclusivamente por médica especializada, garantindo máxima segurança.",
+      "Procedimento não invasivo baseado em tecnologia exaustivamente testada e aprovada por agências reguladoras.",
   },
   {
     icon: FlaskConical,
     title: "Base Científica",
     description:
-      "Fundamentado em estudos clínicos e evidências científicas internacionais.",
+      "Fundamentado em estudos clínicos e evidências científicas internacionais com eficácia e segurança comprovada.",
   },
 ];
 
@@ -51,10 +51,14 @@ const TechniqueSection = () => {
           </h2>
           <div className="divider-elegant" />
           <p className="text-elegant mt-6">
-            Esta técnica revolucionária é única no Brasil. Desenvolvida com tecnologia
+            A técnica FFSculpt é única no Brasil. Desenvolvida com metodologia
             patenteada, oferece resultados significativamente superiores na eliminação
-            de gordura localizada, com total segurança por ser realizada exclusivamente
-            por médicos credenciados.
+            de gordura localizada, redução de medidas, tratamento de lipedema e retração de pele.
+          </p>
+          <p className="text-elegant mt-4">
+            Realizado com total segurança sob avaliação e indicação médica individualizada,
+            equipe treinada e supervisionada por médicos credenciados para garantir
+            melhores resultados e total segurança.
           </p>
         </motion.div>
 
@@ -89,8 +93,11 @@ const TechniqueSection = () => {
           <p className="text-center text-foreground leading-relaxed">
             <span className="font-semibold text-accent">Alta demanda nacional:</span>{" "}
             A exclusividade da técnica e os resultados comprovados geraram uma procura
-            crescente em todo o Brasil. Em Goiânia, a Dra. Isabella é uma das apenas{" "}
-            <span className="font-semibold">duas médicas credenciadas</span> para
+            crescente em todo o Brasil.
+          </p>
+          <p className="text-center text-foreground leading-relaxed mt-2">
+            Em Goiânia, a Dra. Isabella é uma das apenas{" "}
+            <span className="font-semibold">três médicas credenciadas</span> para
             realizar este procedimento.
           </p>
         </motion.div>

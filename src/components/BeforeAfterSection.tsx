@@ -39,9 +39,12 @@ const BeforeAfterSection = () => {
           </h2>
           <div className="divider-elegant" />
           <p className="text-elegant mt-6">
-            Confira resultados reais obtidos por profissionais credenciados na mesma
-            técnica exclusiva. Cada transformação representa a união de tecnologia
-            avançada e expertise médica.
+            Confira resultados reais obtidos com a técnica FFSculpt. Cada transformação
+            representa a união de Método, Tecnologia e Medicina.
+          </p>
+          <p className="text-sm text-muted-foreground mt-3 italic">
+            Ps. Os resultados são reais mas são individuais, não havendo garantias que
+            todos terão os mesmos resultados.
           </p>
         </motion.div>
 

@@ -49,8 +49,7 @@ const Hero = () => {
             <p className="text-elegant max-w-xl">
               Dra. Isabella Tovar agora oferece a técnica patenteada de criolipólise
               que já transformou os resultados de milhares de mulheres no país — e
-              você pode garantir sua primeira sessão antes mesmo da chegada da nova
-              máquina.
+              você pode garantir sua avaliação.
             </p>
 
             {/* Trust Indicators */}
@@ -119,7 +118,7 @@ const Hero = () => {
                 </div>
                 <div>
                   <p className="font-semibold text-foreground text-sm">Credenciamento Exclusivo</p>
-                  <p className="text-xs text-muted-foreground">Uma das 2 médicas em Goiânia</p>
+                  <p className="text-xs text-muted-foreground">Uma das 3 médicas em Goiânia</p>
                 </div>
               </div>
             </motion.div>
