@@ -40,7 +40,7 @@ const Hero = () => {
 
             {/* Headline */}
             <h1 className="heading-hero text-balance">
-              Redefina suas curvas com segurança médica e a técnica de criolipólise{" "}
+              Redefina suas curvas com segurança, eficiência e exclusividade com o Método FFSculpt que combina acompanhamento médico individualizado com a técnica de criolipólise{" "}
               <span className="text-accent">mais avançada do Brasil</span> — agora
               disponível em Goiânia.
             </h1>

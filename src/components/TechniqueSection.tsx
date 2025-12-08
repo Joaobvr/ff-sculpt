@@ -44,10 +44,10 @@ const TechniqueSection = () => {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <span className="text-accent font-medium text-sm uppercase tracking-wider">
-            Tecnologia Exclusiva
+            Método Exclusivo
           </span>
           <h2 className="heading-section mt-4 mb-6">
-            O que é essa técnica exclusiva de criolipólise?
+            O que é a técnica FFSculpt?
           </h2>
           <div className="divider-elegant" />
           <p className="text-elegant mt-6">
