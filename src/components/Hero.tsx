@@ -46,7 +46,7 @@ const Hero = () => {
 
             {/* Subheadline */}
             <p className="text-elegant max-w-xl">
-              Dra. Isabella Tovar agora oferece a metodologia mais avançada e patenteada que combina um protocolo de preparação à mais avançada técnica de criolipólise a partir de uma avaliação e indicação médica individualizada.
+              Dra. Isabella Tovar agora oferece a metodologia não invasiva que oferece resultados significativamente superiores na eliminação de gordura localizada, redução de medidas, tratamento de lipedema e retração de pele.
             </p>
 
             {/* Trust Indicators */}
