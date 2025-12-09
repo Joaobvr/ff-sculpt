@@ -46,9 +46,7 @@ const Hero = () => {
 
             {/* Subheadline */}
             <p className="text-elegant max-w-xl">
-              Dra. Isabella Tovar agora oferece a técnica patenteada de criolipólise
-              que já transformou os resultados de milhares de mulheres no país — e
-              você pode garantir sua avaliação.
+              Dra. Isabella Tovar agora oferece a metodologia mais avançada e patenteada que combina um protocolo de preparação à mais avançada técnica de criolipólise a partir de uma avaliação e indicação médica individualizada.
             </p>
 
             {/* Trust Indicators */}
