@@ -7,8 +7,8 @@ import doctorImage from "@/assets/doctor-portrait.jpg";
 const credentials = [
   {
     icon: GraduationCap,
-    title: "Formação Médica Completa",
-    description: "Médica com pós-graduação em Ginecologia (não especialista) com cursos em emagrecimento e estética",
+    title: "Foco na Saúde da Mulher",
+    description: "Médica com pós-graduação em Ginecologia e Obstetrícia (não especialista)",
   },
   {
     icon: Heart,
