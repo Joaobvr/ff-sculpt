@@ -65,7 +65,7 @@ const Footer = () => {
             transition={{ delay: 0.2 }}
             className="text-right"
           >
-            <p className="text-sm text-primary-foreground/70">CRM-GO XXXXX</p>
+            <p className="text-sm text-primary-foreground/70">CRM-GO 27286</p>
             <p className="text-xs text-primary-foreground/50 mt-2 max-w-xs ml-auto">
               Este material tem caráter informativo. Os resultados podem variar de pessoa
               para pessoa. Consulte sempre um profissional qualificado.
