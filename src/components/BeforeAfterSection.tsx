@@ -119,7 +119,7 @@ const BeforeAfterSection = () => {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="group relative aspect-[4/3] bg-gradient-to-br from-secondary via-rose to-secondary rounded-2xl overflow-hidden border border-border/50 shadow-soft"
+            className="group relative aspect-[3/2] bg-gradient-to-br from-secondary via-rose to-secondary rounded-2xl overflow-hidden border border-border/50 shadow-soft sm:col-span-2 lg:col-span-1"
           >
             <img
               src="/images/before-after-4.jpg"
