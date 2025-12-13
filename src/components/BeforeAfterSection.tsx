@@ -114,13 +114,32 @@ const BeforeAfterSection = () => {
             </div>
           </motion.div>
 
+          {/* Fourth slot - Redução de Medidas */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={isInView ? { opacity: 1, scale: 1 } : {}}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="group relative aspect-[4/3] bg-gradient-to-br from-secondary via-rose to-secondary rounded-2xl overflow-hidden border border-border/50 shadow-soft"
+          >
+            <img
+              src="/images/before-after-4.jpg"
+              alt="Resultado antes e depois - Redução de Medidas"
+              className="absolute inset-0 w-full h-full object-cover object-center"
+            />
+            <div className="absolute bottom-3 left-3 bg-background/80 backdrop-blur-sm px-3 py-1 rounded-full">
+              <p className="text-foreground text-xs font-medium">
+                Resultado - Redução de Medidas
+              </p>
+            </div>
+          </motion.div>
+
           {/* Remaining placeholders */}
-          {placeholders.slice(3).map((item, index) => (
+          {placeholders.slice(4).map((item, index) => (
             <motion.div
               key={item.id}
               initial={{ opacity: 0, scale: 0.95 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
-              transition={{ duration: 0.5, delay: (index + 3) * 0.1 }}
+              transition={{ duration: 0.5, delay: (index + 4) * 0.1 }}
               className="group relative aspect-[4/3] bg-gradient-to-br from-secondary via-rose to-secondary rounded-2xl overflow-hidden border border-border/50 shadow-soft"
             >
               {/* Placeholder Content */}
