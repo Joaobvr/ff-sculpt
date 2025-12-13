@@ -133,13 +133,32 @@ const BeforeAfterSection = () => {
             </div>
           </motion.div>
 
+          {/* Fifth slot - Redução de Gordura */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={isInView ? { opacity: 1, scale: 1 } : {}}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="group relative aspect-[4/3] bg-gradient-to-br from-secondary via-rose to-secondary rounded-2xl overflow-hidden border border-border/50 shadow-soft"
+          >
+            <img
+              src="/images/before-after-5.jpg"
+              alt="Resultado antes e depois - Redução de Gordura"
+              className="absolute inset-0 w-full h-full object-cover object-center"
+            />
+            <div className="absolute bottom-3 left-3 bg-background/80 backdrop-blur-sm px-3 py-1 rounded-full">
+              <p className="text-foreground text-xs font-medium">
+                Resultado - Redução de Gordura
+              </p>
+            </div>
+          </motion.div>
+
           {/* Remaining placeholders */}
-          {placeholders.slice(4).map((item, index) => (
+          {placeholders.slice(5).map((item, index) => (
             <motion.div
               key={item.id}
               initial={{ opacity: 0, scale: 0.95 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
-              transition={{ duration: 0.5, delay: (index + 4) * 0.1 }}
+              transition={{ duration: 0.5, delay: (index + 5) * 0.1 }}
               className="group relative aspect-[4/3] bg-gradient-to-br from-secondary via-rose to-secondary rounded-2xl overflow-hidden border border-border/50 shadow-soft"
             >
               {/* Placeholder Content */}
