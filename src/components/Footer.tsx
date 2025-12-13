@@ -45,11 +45,11 @@ const Footer = () => {
               @isabellarodriguestovar
             </a>
             <a
-              href="tel:+5562999999999"
+              href="tel:+5562960930736"
               className="flex items-center gap-3 text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors"
             >
               <Phone className="w-4 h-4" />
-              (62) 99999-9999
+              (62) 9609-3076
             </a>
             <div className="flex items-center gap-3 text-sm text-primary-foreground/80">
               <MapPin className="w-4 h-4" />
