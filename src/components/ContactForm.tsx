@@ -55,7 +55,7 @@ const ContactForm = () => {
       const whatsappMessage = encodeURIComponent(
         `Olá! Acabei de preencher minha pré-avaliação para criolipólise com a Dra. Isabella. Quero agendar minha sessão.\n\nNome: ${formData.nome}\nIdade: ${formData.idade}\nTelefone: ${formData.telefone}\nRegião: ${formData.regiao}\nObjetivo: ${formData.objetivo}`
       );
-      const whatsappUrl = `https://wa.me/5562999999999?text=${whatsappMessage}`;
+      const whatsappUrl = `https://wa.me/5562996093076?text=${whatsappMessage}`;
 
       setIsSubmitting(false);
       setIsSubmitted(true);
