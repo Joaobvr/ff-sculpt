@@ -64,13 +64,15 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.6 }}
             >
-              <button
-                onClick={scrollToForm}
+              <a
+                href="https://wa.me/5562996093076?text=Olá! Quero agendar minha pré-avaliação para criolipólise com a Dra. Isabella."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-accent group inline-flex items-center gap-3"
               >
                 Quero Minha Pré-Avaliação
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-              </button>
+              </a>
             </motion.div>
           </motion.div>
 
