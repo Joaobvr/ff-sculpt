@@ -152,13 +152,38 @@ const BeforeAfterSection = () => {
             </div>
           </motion.div>
 
+          {/* Slot 6 - Video */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={isInView ? { opacity: 1, scale: 1 } : {}}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="group relative aspect-[4/3] bg-gradient-to-br from-secondary via-rose to-secondary rounded-2xl overflow-hidden border border-border/50 shadow-soft"
+          >
+            <video
+              className="absolute inset-0 w-full h-full object-cover object-center"
+              autoPlay
+              loop
+              muted
+              playsInline
+              poster=""
+            >
+              <source src="/videos/before-after-6.mp4" type="video/mp4" />
+              Seu navegador não suporta o elemento de vídeo.
+            </video>
+            <div className="absolute bottom-3 left-3 bg-background/80 backdrop-blur-sm px-3 py-1 rounded-full">
+              <p className="text-foreground text-xs font-medium">
+                Resultado - Antes e Depois
+              </p>
+            </div>
+          </motion.div>
+
           {/* Remaining placeholders */}
-          {placeholders.slice(5).map((item, index) => (
+          {placeholders.slice(6).map((item, index) => (
             <motion.div
               key={item.id}
               initial={{ opacity: 0, scale: 0.95 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
-              transition={{ duration: 0.5, delay: (index + 5) * 0.1 }}
+              transition={{ duration: 0.5, delay: (index + 6) * 0.1 }}
               className="group relative aspect-[4/3] bg-gradient-to-br from-secondary via-rose to-secondary rounded-2xl overflow-hidden border border-border/50 shadow-soft"
             >
               {/* Placeholder Content */}
