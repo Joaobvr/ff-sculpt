@@ -172,7 +172,7 @@ const BeforeAfterSection = () => {
             </video>
             <div className="absolute bottom-3 left-3 bg-background/80 backdrop-blur-sm px-3 py-1 rounded-full">
               <p className="text-foreground text-xs font-medium">
-                Resultado - Antes e Depois
+                Resultado - Papada
               </p>
             </div>
           </motion.div>
