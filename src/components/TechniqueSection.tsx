@@ -56,8 +56,8 @@ const TechniqueSection = () => {
             localizada, redução de medidas, tratamento de lipedema e retração de pele.
           </p>
           <p className="text-elegant mt-4">
-            FFSculpt combina uma avaliação médica detalhada, uma terapia pré procedimental
-            e a aplicação de um protocolo exclusivo de crioterapia.
+            FFSculpt combina uma avaliação médica detalhada, uma preparação do seu corpo
+            e do seu tecido adiposo e a aplicação de uma técnica exclusiva de crioterapia.
           </p>
           <p className="text-elegant mt-4">
             Trata-se de uma metodologia segura com técnicas não invasivas amplamente
