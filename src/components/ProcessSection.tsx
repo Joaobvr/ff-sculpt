@@ -30,7 +30,7 @@ const steps = [
     icon: Snowflake,
     title: "Sessão de Criolipólise",
     description:
-      "Procedimento realizado com protocolo exclusivo, conforto e total segurança médica.",
+      "Procedimento realizado com metodologia exclusiva, conforto e total segurança médica.",
   },
   {
     number: "05",
