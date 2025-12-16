@@ -78,7 +78,7 @@ const DoctorSection = () => {
           >
             <div>
               <span className="text-accent font-medium text-sm uppercase tracking-wider">
-                Sua Especialista
+                Sua médica
               </span>
               <h2 className="heading-section mt-4">
                 Por que fazer com a Dra. Isabella?
