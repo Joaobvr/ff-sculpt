@@ -21,7 +21,7 @@ const steps = [
   {
     number: "03",
     icon: Stethoscope,
-    title: "Consulta e Mensuração",
+    title: "Avaliação e Planejamento",
     description:
       "Avaliação presencial completa com medidas, análise de gordura e planejamento personalizado.",
   },
