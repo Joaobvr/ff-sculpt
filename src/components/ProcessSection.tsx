@@ -7,7 +7,7 @@ const steps = [
   {
     number: "01",
     icon: ClipboardCheck,
-    title: "Pré-avaliação Online",
+    title: "Pré-avaliação",
     description:
       "Preencha nosso formulário detalhado para que possamos entender suas necessidades e objetivos.",
   },
