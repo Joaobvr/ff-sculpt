@@ -12,7 +12,7 @@ const credentials = [
   },
   {
     icon: Heart,
-    title: "Especialista em Estética",
+    title: "Estética íntima e corporal",
     description: "Experiência consolidada em estética íntima e corporal feminina",
   },
   {
