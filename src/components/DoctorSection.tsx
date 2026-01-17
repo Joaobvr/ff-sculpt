@@ -114,6 +114,36 @@ const DoctorSection = () => {
                 </motion.div>
               ))}
             </div>
+
+            {/* Services List */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.7 }}
+              className="p-6 bg-card/50 rounded-xl border border-border/30"
+            >
+              <h4 className="font-display font-semibold text-foreground mb-4">
+                Como a Dra. Isabella pode te ajudar:
+              </h4>
+              <ul className="grid sm:grid-cols-2 gap-2">
+                {[
+                  "Emagrecimento",
+                  "Harmonização corporal",
+                  "Tratamento ginecológico",
+                  "Estética Íntima",
+                  "Reposição Hormonal",
+                  "Implantes hormonais",
+                  "Implanon",
+                  "DIU",
+                  "Acompanhamento integral",
+                ].map((service) => (
+                  <li key={service} className="flex items-center gap-2 text-sm text-muted-foreground">
+                    <span className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0" />
+                    {service}
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
           </motion.div>
         </div>
       </div>
