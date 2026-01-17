@@ -24,9 +24,9 @@ const features = [
   },
   {
     icon: FlaskConical,
-    title: "Base Científica",
+    title: "Resultados Duradouros",
     description:
-      "Fundamentado em estudos clínicos e evidências científicas internacionais com eficácia e segurança comprovada.",
+      "O método FFSculpt tem começo, meio e fim. Os resultados são duradouros e não dependem de recorrência.",
   },
 ];
 
