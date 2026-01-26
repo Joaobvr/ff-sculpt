@@ -122,20 +122,24 @@ const DoctorSection = () => {
               transition={{ duration: 0.5, delay: 0.7 }}
               className="p-6 bg-card/50 rounded-xl border border-border/30"
             >
-              <h4 className="font-display font-semibold text-foreground mb-4">
-                Como a Dra. Isabella pode te ajudar:
-              </h4>
+              <p className="text-muted-foreground mb-4">
+                A Dra. Isabella oferece um cuidado integral à mulher em todas as suas fases.
+              </p>
               <ul className="grid sm:grid-cols-2 gap-2">
                 {[
+                  "Consulta de rotina",
+                  "Prevenção",
+                  "Climatério/Menopausa",
+                  "Síndrome dos ovários policísticos",
+                  "Endometriose",
                   "Emagrecimento",
-                  "Harmonização corporal",
-                  "Tratamento ginecológico",
-                  "Estética Íntima",
+                  "Inserção de DIU",
+                  "Inserção de Implanon",
                   "Reposição Hormonal",
-                  "Implantes hormonais",
-                  "Implanon",
-                  "DIU",
-                  "Acompanhamento integral",
+                  "Implantes Hormonais",
+                  "Terapia Injetável",
+                  "Harmonização corporal: FFSCULPT e enzimas",
+                  "Tratamento íntimo: estético e funcional",
                 ].map((service) => (
                   <li key={service} className="flex items-center gap-2 text-sm text-muted-foreground">
                     <span className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0" />
