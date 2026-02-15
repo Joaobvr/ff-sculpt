@@ -34,7 +34,7 @@ const Hero = () => {
 
             {/* Subheadline */}
             <p className="text-elegant max-w-xl">
-              Dra. Isabella Tovar agora oferece a metodologia não invasiva que oferece resultados significativamente superiores na eliminação de gordura localizada, redução de medidas, tratamento de lipedema e retração de pele.
+              Dra. Isabella Tovar é uma das médicas do Brasil que oferece a metodologia não invasiva que vem obtendo resultados incríveis na eliminação de gordura localizada, redução de medidas, tratamento de lipedema e retração de pele: o método FF Sculpt.
             </p>
 
             {/* Trust Indicators */}
