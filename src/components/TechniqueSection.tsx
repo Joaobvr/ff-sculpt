@@ -51,13 +51,25 @@ const TechniqueSection = () => {
           </h2>
           <div className="divider-elegant" />
           <p className="text-elegant mt-6">
-            A técnica FFSculpt é única no Brasil. Desenvolvida com metodologia
-            patenteada, oferece resultados empolgantes na eliminação de gordura
-            localizada, redução de medidas, tratamento de lipedema e retração de pele.
+            A técnica FFSculpt é única no Brasil. Uma metodologia patenteada que oferece
+            resultados empolgantes na eliminação de gordura localizada, redução de medidas,
+            tratamento de lipedema e retração de pele. Além de ser aplicado na região íntima
+            com finalidade estética e funcional.
           </p>
           <p className="text-elegant mt-4">
             FFSculpt combina uma avaliação médica detalhada, uma preparação do seu corpo
-            e do seu tecido adiposo e a aplicação de uma técnica exclusiva de crioterapia.
+            e do seu tecido adiposo e a aplicação de uma técnica detalhada de crioterapia.
+          </p>
+          <p className="text-elegant mt-4">
+            O tratamento induz a apoptose (uma auto destruição programada) das células de
+            gordura e induzem a atividade de células que produzem as fibras (inclusive o colágeno).
+          </p>
+          <p className="text-elegant mt-4">
+            Com isso pode eliminar gordura localizada e promover a firmeza da pele.
+          </p>
+          <p className="text-elegant mt-4">
+            E isso ocorre sem cortes e sem cicatrizes, por um processo feito pelo seu próprio
+            corpo a partir da ativação gerada pelo FF Sculpt.
           </p>
           <p className="text-elegant mt-4">
             Trata-se de uma metodologia segura com técnicas não invasivas amplamente
