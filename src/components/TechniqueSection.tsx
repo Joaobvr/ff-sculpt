@@ -76,7 +76,7 @@ const TechniqueSection = () => {
             testadas e validadas pela ciência.
           </p>
           <p className="text-elegant mt-4">
-            Realizado com total segurança sob avaliação e indicação médica, equipe
+            Realizado de forma personalizada, sob avaliação e indicação médica, equipe
             treinada e supervisionada por médicos credenciados para garantir melhores
             resultados e total segurança.
           </p>
