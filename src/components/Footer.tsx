@@ -23,7 +23,7 @@ const Footer = () => {
             </div>
             <div>
               <h4 className="font-display font-semibold">Dra. Isabella Rodrigues Tovar</h4>
-              <p className="text-sm text-primary-foreground/70">Médica | Saúde, Estética e Bem Estar</p>
+              <p className="text-sm text-primary-foreground/70">Médica | Saúde, Beleza e Vitalidade</p>
             </div>
           </motion.div>
 

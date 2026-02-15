@@ -63,7 +63,7 @@ const DoctorSection = () => {
                   Dra. Isabella Rodrigues Tovar
                 </p>
                 <p className="text-xs text-muted-foreground text-center mt-1">
-                  Saúde, Estética e Bem Estar
+                  Saúde, Beleza e Vitalidade
                 </p>
               </motion.div>
             </div>
