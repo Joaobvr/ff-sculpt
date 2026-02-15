@@ -38,25 +38,6 @@ const Hero = () => {
             </p>
 
             {/* Trust Indicators */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.6 }}
-              className="flex flex-wrap gap-6"
-            >
-              <div className="flex items-center gap-2">
-                <Shield className="w-5 h-5 text-primary" />
-                <span className="text-sm text-muted-foreground">Segurança Médica</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Award className="w-5 h-5 text-primary" />
-                <span className="text-sm text-muted-foreground">Técnica Patenteada</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Star className="w-5 h-5 text-primary" />
-                <span className="text-sm text-muted-foreground">Resultados Comprovados</span>
-              </div>
-            </motion.div>
 
             {/* CTA */}
             <motion.div
