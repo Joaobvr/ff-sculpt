@@ -28,8 +28,8 @@ const Hero = () => {
 
             {/* Headline */}
             <h1 className="heading-hero text-balance text-center lg:text-left">
-              Redefina suas curvas com segurança, eficiência e exclusividade com o Método FFSculpt{" "}
-              <span className="text-accent">— agora disponível em Goiânia.</span>
+              Redefina suas curvas com segurança, eficiência, sem cortes e sem cicatrizes com o{" "}
+              <span className="text-accent">Método FFSculpt.</span>
             </h1>
 
             {/* Subheadline */}
