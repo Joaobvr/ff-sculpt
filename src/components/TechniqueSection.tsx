@@ -65,7 +65,7 @@ const TechniqueSection = () => {
             gordura e induzem a atividade de células que produzem as fibras (inclusive o colágeno).
           </p>
           <p className="text-elegant mt-4">
-            Com isso pode eliminar gordura localizada e promover a firmeza da pele.
+            O efeito disso é a redução da gordura subcutânea e a reestruturação da derme, gerando menos gordura e pele mais firme e vistosa.
           </p>
           <p className="text-elegant mt-4">
             E isso ocorre sem cortes e sem cicatrizes, por um processo feito pelo seu próprio
