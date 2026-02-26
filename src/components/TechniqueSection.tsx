@@ -1,34 +1,6 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Sparkles, ShieldCheck, FlaskConical, TrendingUp } from "lucide-react";
-
-const features = [
-  {
-    icon: Sparkles,
-    title: "Técnica Patenteada",
-    description:
-      "Método exclusivo desenvolvido no Brasil, com protocolo protegido por patente nacional.",
-  },
-  {
-    icon: TrendingUp,
-    title: "Resultados Superiores",
-    description:
-      "Eficiência e segurança comprovada com resultados visíveis já nas primeiras semanas.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Segurança Médica",
-    description:
-      "Procedimento não invasivo baseado em tecnologia exaustivamente testada e aprovada por agências reguladoras.",
-  },
-  {
-    icon: FlaskConical,
-    title: "Resultados Duradouros",
-    description:
-      "O método FFSculpt tem começo, meio e fim. Os resultados são duradouros e não dependem de recorrência.",
-  },
-];
 
 const TechniqueSection = () => {
   const ref = useRef(null);
@@ -81,28 +53,6 @@ const TechniqueSection = () => {
             resultados e total segurança.
           </p>
         </motion.div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {features.map((feature, index) => (
-            <motion.div
-              key={feature.title}
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="card-elegant text-center group"
-            >
-              <div className="w-14 h-14 mx-auto mb-5 bg-secondary rounded-xl flex items-center justify-center group-hover:bg-primary/10 transition-colors duration-300">
-                <feature.icon className="w-7 h-7 text-primary" />
-              </div>
-              <h3 className="font-display text-lg font-medium text-foreground mb-3">
-                {feature.title}
-              </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                {feature.description}
-              </p>
-            </motion.div>
-          ))}
-        </div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
