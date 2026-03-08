@@ -162,9 +162,7 @@ const BeforeAfterSection = () => {
             <video
               key="papada-video"
               className="absolute inset-0 w-full h-full object-cover object-center"
-              autoPlay
-              loop
-              muted
+              controls
               playsInline
               preload="auto"
               src="/videos/before-after-6.mp4"
