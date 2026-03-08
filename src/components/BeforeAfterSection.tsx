@@ -160,16 +160,15 @@ const BeforeAfterSection = () => {
             className="group relative aspect-[4/3] bg-gradient-to-br from-secondary via-rose to-secondary rounded-2xl overflow-hidden border border-border/50 shadow-soft"
           >
             <video
+              key="papada-video"
               className="absolute inset-0 w-full h-full object-cover object-center"
               autoPlay
               loop
               muted
               playsInline
-              poster=""
-            >
-              <source src="/videos/before-after-6.mp4" type="video/mp4" />
-              Seu navegador não suporta o elemento de vídeo.
-            </video>
+              preload="auto"
+              src="/videos/before-after-6.mp4"
+            />
             <div className="absolute bottom-3 left-3 bg-background/80 backdrop-blur-sm px-3 py-1 rounded-full">
               <p className="text-foreground text-xs font-medium">
                 Resultado - Papada
