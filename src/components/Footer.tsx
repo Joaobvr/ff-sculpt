@@ -6,13 +6,13 @@ const Footer = () => {
   return (
     <footer className="bg-foreground text-primary-foreground py-12 px-4">
       <div className="container-wide">
-        <div className="grid md:grid-cols-3 gap-8 items-start md:items-center text-center md:text-left">
+        <div className="grid md:grid-cols-3 gap-8 items-center">
           {/* Doctor Info */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="flex flex-col sm:flex-row items-center gap-4 md:items-center"
+            className="flex items-center gap-4"
           >
             <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-primary-foreground/20">
               <img
@@ -21,7 +21,7 @@ const Footer = () => {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="text-center sm:text-left">
+            <div>
               <h4 className="font-display font-semibold">Dra. Isabella Rodrigues Tovar</h4>
               <p className="text-sm text-primary-foreground/70">Médica | Saúde, Beleza e Vitalidade</p>
             </div>
@@ -33,7 +33,7 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="space-y-3 flex flex-col items-center md:items-start"
+            className="space-y-3"
           >
             <a
               href="https://instagram.com/isabellarodriguestovar"
@@ -63,7 +63,7 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="md:text-right"
+            className="text-right"
           >
             <p className="text-sm text-primary-foreground/70">CRM-GO 27286</p>
             <p className="text-xs text-primary-foreground/50 mt-2 max-w-xs ml-auto">

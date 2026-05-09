@@ -21,13 +21,13 @@ const Hero = () => {
       </div>
 
       <div className="relative container-wide section-padding">
-        <div className="flex items-center justify-center min-h-[80vh] md:min-h-[85vh]">
+        <div className="flex items-center justify-center min-h-[85vh]">
           {/* Content */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="space-y-6 md:space-y-8 max-w-2xl text-center"
+            className="space-y-8 max-w-2xl text-center"
           >
             <h1 className="heading-hero text-balance">
               Redefina suas curvas com segurança, eficiência, sem cortes e sem cicatrizes com o{" "}
