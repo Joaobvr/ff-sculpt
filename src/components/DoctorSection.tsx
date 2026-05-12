@@ -48,7 +48,7 @@ const DoctorSection = () => {
                 <img
                   src={doctorImage}
                   alt="Dra. Isabella Rodrigues Tovar"
-                  className="w-full aspect-[3/4] object-cover object-[center_10%]"
+                  className="w-full aspect-[3/4] object-cover object-[center_10%] mt-0"
                 />
               </div>
               
