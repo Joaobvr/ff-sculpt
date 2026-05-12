@@ -43,12 +43,12 @@ const DoctorSection = () => {
             className="relative order-2 lg:order-1"
           >
             <div className="relative">
-              <div className="absolute -inset-4 bg-secondary/50 rounded-3xl blur-2xl" />
+              <div className="absolute -inset-4 bg-secondary/50 rounded-3xl blur-2xl my-0" />
               <div className="relative rounded-2xl overflow-hidden shadow-elegant">
                 <img
                   src={doctorImage}
                   alt="Dra. Isabella Rodrigues Tovar"
-                  className="w-full aspect-[3/4] object-cover object-center mt-0"
+                  className="w-full aspect-[3/4] object-center mt-0 mb-0 my-[2px] object-scale-down"
                 />
               </div>
               
