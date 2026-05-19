@@ -8,6 +8,9 @@ const BeforeAfterSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const scrollToForm = () => {
+    if (typeof (window as any).fbq === "function") {
+      (window as any).fbq("track", "Lead");
+    }
     const formSection = document.getElementById("pre-avaliacao");
     formSection?.scrollIntoView({ behavior: "smooth" });
   };

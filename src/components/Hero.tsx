@@ -4,6 +4,9 @@ import heroBg from "@/assets/hero-bg.png";
 
 const Hero = () => {
   const scrollToForm = () => {
+    if (typeof (window as any).fbq === "function") {
+      (window as any).fbq("track", "Lead");
+    }
     const formSection = document.getElementById("pre-avaliacao");
     formSection?.scrollIntoView({ behavior: "smooth" });
   };
