@@ -66,6 +66,9 @@ const ContactForm = () => {
       });
 
       setTimeout(() => {
+        if (typeof (window as any).fbq === "function") {
+          (window as any).fbq("track", "Contact");
+        }
         window.open(whatsappUrl, "_blank");
       }, 1500);
     }, 1000);
