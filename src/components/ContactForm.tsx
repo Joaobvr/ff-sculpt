@@ -1,7 +1,5 @@
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { Send, CheckCircle } from "lucide-react";
+import { CheckCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const regions = [
@@ -23,8 +21,7 @@ const scheduleOptions = [
 ];
 
 const ContactForm = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const ref = useRef<HTMLDivElement | null>(null);
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -76,62 +73,49 @@ const ContactForm = () => {
 
   if (isSubmitted) {
     return (
-      <section id="pre-avaliacao" ref={ref} className="section-padding bg-card">
+      <section id="pre-avaliacao" ref={ref} className="section-padding bg-cream">
         <div className="container-narrow">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="text-center py-16"
-          >
-            <div className="w-20 h-20 mx-auto mb-6 bg-primary/10 rounded-full flex items-center justify-center">
-              <CheckCircle className="w-10 h-10 text-primary" />
+          <div className="text-center py-16">
+            <div className="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center" style={{ background: "var(--rose-light-hex)" }}>
+              <CheckCircle className="w-10 h-10" style={{ color: "var(--rose-hex)" }} />
             </div>
             <h2 className="heading-section mb-4">Pré-avaliação Enviada!</h2>
             <p className="text-elegant max-w-md mx-auto">
               Obrigada pelo seu interesse! Você será redirecionada para o WhatsApp
               para finalizar o agendamento com nossa equipe.
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
     );
   }
 
   return (
-    <section id="pre-avaliacao" ref={ref} className="section-padding bg-card">
+    <section id="pre-avaliacao" ref={ref} className="section-padding bg-cream">
       <div className="container-narrow">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12"
-        >
-          <span className="text-accent font-medium text-sm uppercase tracking-wider">
-            Próximo Passo
-          </span>
-          <h2 className="heading-section mt-4 mb-6">
-            Formulário de Pré-Avaliação
+        <div className="max-w-2xl mb-10">
+          <span className="eyebrow">Próximo Passo</span>
+          <h2 className="heading-section mt-3">
+            Formulário de <em>Pré-Avaliação</em>
           </h2>
-          <div className="divider-elegant" />
-          <p className="text-elegant mt-6 max-w-2xl mx-auto">
+          <div className="hairline" />
+          <p className="text-elegant">
             Preencha o formulário abaixo para que possamos entender seu caso e
             preparar uma avaliação personalizada. Após o envio, você será
             direcionada ao WhatsApp para agendar sua consulta.
           </p>
-        </motion.div>
+        </div>
 
-        <motion.form
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.2 }}
+        <form
           onSubmit={handleSubmit}
-          className="bg-gradient-card rounded-2xl p-6 md:p-10 border border-border/50 shadow-medium"
+          className="bg-warm-white border border-brand"
+          style={{ borderRadius: 16, padding: "32px 24px" }}
         >
           <div className="grid md:grid-cols-2 gap-6">
             {/* Nome */}
-            <div className="space-y-2">
-              <label htmlFor="nome" className="block text-sm font-medium text-foreground">
-                Nome Completo *
+            <div>
+              <label htmlFor="nome" className="field-label">
+                Nome Completo <span className="field-required">*</span>
               </label>
               <input
                 type="text"
@@ -140,15 +124,15 @@ const ContactForm = () => {
                 required
                 value={formData.nome}
                 onChange={handleChange}
-                className="w-full px-4 py-3 bg-background border border-input rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent transition-all duration-200 text-foreground placeholder:text-muted-foreground"
+                className="field-input"
                 placeholder="Seu nome completo"
               />
             </div>
 
             {/* Idade */}
-            <div className="space-y-2">
-              <label htmlFor="idade" className="block text-sm font-medium text-foreground">
-                Idade *
+            <div>
+              <label htmlFor="idade" className="field-label">
+                Idade <span className="field-required">*</span>
               </label>
               <input
                 type="number"
@@ -159,15 +143,15 @@ const ContactForm = () => {
                 max="100"
                 value={formData.idade}
                 onChange={handleChange}
-                className="w-full px-4 py-3 bg-background border border-input rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent transition-all duration-200 text-foreground placeholder:text-muted-foreground"
+                className="field-input"
                 placeholder="Sua idade"
               />
             </div>
 
             {/* Telefone */}
-            <div className="space-y-2">
-              <label htmlFor="telefone" className="block text-sm font-medium text-foreground">
-                Telefone/WhatsApp *
+            <div>
+              <label htmlFor="telefone" className="field-label">
+                Telefone/WhatsApp <span className="field-required">*</span>
               </label>
               <input
                 type="tel"
@@ -176,15 +160,15 @@ const ContactForm = () => {
                 required
                 value={formData.telefone}
                 onChange={handleChange}
-                className="w-full px-4 py-3 bg-background border border-input rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent transition-all duration-200 text-foreground placeholder:text-muted-foreground"
+                className="field-input"
                 placeholder="(62) 99999-9999"
               />
             </div>
 
             {/* Região */}
-            <div className="space-y-2">
-              <label htmlFor="regiao" className="block text-sm font-medium text-foreground">
-                Região a Tratar *
+            <div>
+              <label htmlFor="regiao" className="field-label">
+                Região a Tratar <span className="field-required">*</span>
               </label>
               <select
                 id="regiao"
@@ -192,7 +176,7 @@ const ContactForm = () => {
                 required
                 value={formData.regiao}
                 onChange={handleChange}
-                className="w-full px-4 py-3 bg-background border border-input rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent transition-all duration-200 text-foreground"
+                className="field-input"
               >
                 <option value="">Selecione uma região</option>
                 {regions.map((region) => (
@@ -204,8 +188,8 @@ const ContactForm = () => {
             </div>
 
             {/* Histórico */}
-            <div className="space-y-2">
-              <label htmlFor="historico" className="block text-sm font-medium text-foreground">
+            <div>
+              <label htmlFor="historico" className="field-label">
                 Já fez criolipólise antes?
               </label>
               <select
@@ -213,7 +197,7 @@ const ContactForm = () => {
                 name="historico"
                 value={formData.historico}
                 onChange={handleChange}
-                className="w-full px-4 py-3 bg-background border border-input rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent transition-all duration-200 text-foreground"
+                className="field-input"
               >
                 <option value="">Selecione</option>
                 <option value="nao">Nunca fiz</option>
@@ -223,9 +207,9 @@ const ContactForm = () => {
             </div>
 
             {/* Horário */}
-            <div className="space-y-2">
-              <label htmlFor="horario" className="block text-sm font-medium text-foreground">
-                Melhor Horário *
+            <div>
+              <label htmlFor="horario" className="field-label">
+                Melhor Horário <span className="field-required">*</span>
               </label>
               <select
                 id="horario"
@@ -233,7 +217,7 @@ const ContactForm = () => {
                 required
                 value={formData.horario}
                 onChange={handleChange}
-                className="w-full px-4 py-3 bg-background border border-input rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent transition-all duration-200 text-foreground"
+                className="field-input"
               >
                 <option value="">Selecione um horário</option>
                 {scheduleOptions.map((option) => (
@@ -245,8 +229,8 @@ const ContactForm = () => {
             </div>
 
             {/* Comorbidades */}
-            <div className="space-y-2 md:col-span-2">
-              <label htmlFor="comorbidades" className="block text-sm font-medium text-foreground">
+            <div className="md:col-span-2">
+              <label htmlFor="comorbidades" className="field-label">
                 Possui alguma condição de saúde relevante?
               </label>
               <input
@@ -255,15 +239,15 @@ const ContactForm = () => {
                 name="comorbidades"
                 value={formData.comorbidades}
                 onChange={handleChange}
-                className="w-full px-4 py-3 bg-background border border-input rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent transition-all duration-200 text-foreground placeholder:text-muted-foreground"
+                className="field-input"
                 placeholder="Ex: diabetes, problemas circulatórios, etc."
               />
             </div>
 
             {/* Objetivo */}
-            <div className="space-y-2 md:col-span-2">
-              <label htmlFor="objetivo" className="block text-sm font-medium text-foreground">
-                Qual seu principal objetivo? *
+            <div className="md:col-span-2">
+              <label htmlFor="objetivo" className="field-label">
+                Qual seu principal objetivo? <span className="field-required">*</span>
               </label>
               <textarea
                 id="objetivo"
@@ -272,35 +256,30 @@ const ContactForm = () => {
                 rows={3}
                 value={formData.objetivo}
                 onChange={handleChange}
-                className="w-full px-4 py-3 bg-background border border-input rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent transition-all duration-200 text-foreground placeholder:text-muted-foreground resize-none"
+                className="field-input resize-none"
                 placeholder="Descreva brevemente o que você espera alcançar com o tratamento..."
               />
             </div>
           </div>
 
-          <div className="mt-8 text-center">
+          <div className="mt-8">
             <button
               type="submit"
               disabled={isSubmitting}
-              className="btn-accent group inline-flex items-center gap-3 disabled:opacity-70 disabled:cursor-not-allowed"
+              className="btn-primary w-full justify-center"
+              style={{ width: "100%" }}
             >
               {isSubmitting ? (
-                <>
-                  <span className="w-5 h-5 border-2 border-accent-foreground/30 border-t-accent-foreground rounded-full animate-spin" />
-                  Enviando...
-                </>
+                <span>Enviando…</span>
               ) : (
-                <>
-                  Enviar Pré-Avaliação
-                  <Send className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                </>
+                <span>Enviar Pré-Avaliação</span>
               )}
             </button>
-            <p className="text-xs text-muted-foreground mt-4">
+            <p style={{ fontSize: "0.72rem", color: "var(--text-tertiary-hex)", marginTop: 14, textAlign: "center" }}>
               Ao enviar, você será redirecionada ao WhatsApp para finalizar o agendamento.
             </p>
           </div>
-        </motion.form>
+        </form>
       </div>
     </section>
   );

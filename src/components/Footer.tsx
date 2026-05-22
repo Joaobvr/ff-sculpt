@@ -1,80 +1,70 @@
-import { motion } from "framer-motion";
 import { Instagram, Phone, MapPin } from "lucide-react";
-import doctorImage from "@/assets/doctor-portrait.jpg";
 
 const Footer = () => {
   return (
-    <footer className="bg-foreground text-primary-foreground py-12 px-4">
+    <footer className="bg-dark-brand" style={{ padding: "60px 28px 32px" }}>
       <div className="container-wide">
-        <div className="grid md:grid-cols-3 gap-8 items-center">
-          {/* Doctor Info */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="flex items-center gap-4"
-          >
-            <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-primary-foreground/20">
-              <img
-                src={doctorImage}
-                alt="Dra. Isabella Rodrigues Tovar"
-                className="w-full h-full object-cover"
-              />
+        <div className="grid md:grid-cols-3 gap-10">
+          <div>
+            <div className="font-display" style={{ fontSize: "1.15rem", color: "#fff" }}>
+              Dra. Isabella <span style={{ fontStyle: "italic", color: "var(--champagne-hex)" }}>Tovar</span>
             </div>
-            <div>
-              <h4 className="font-display font-semibold">Dra. Isabella Rodrigues Tovar</h4>
-              <p className="text-sm text-primary-foreground/70">Médica | Saúde, Beleza e Vitalidade</p>
-            </div>
-          </motion.div>
+            <p style={{ fontSize: "0.74rem", color: "var(--champagne-hex)", marginTop: 6 }}>
+              Saúde, Beleza e Vitalidade
+            </p>
+          </div>
 
-          {/* Contact Info */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="space-y-3"
-          >
+          <div className="space-y-3">
             <a
               href="https://instagram.com/isabellarodriguestovar"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-3 text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+              className="flex items-center gap-3"
+              style={{ fontSize: "0.8rem", color: "rgba(255,255,255,0.6)" }}
             >
-              <Instagram className="w-4 h-4" />
+              <Instagram size={16} strokeWidth={1.2} style={{ color: "var(--champagne-hex)" }} />
               @isabellarodriguestovar
             </a>
             <a
-              href="tel:+55629960930736"
-              className="flex items-center gap-3 text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+              href="tel:+5562996093076"
+              className="flex items-center gap-3"
+              style={{ fontSize: "0.8rem", color: "rgba(255,255,255,0.6)" }}
             >
-              <Phone className="w-4 h-4" />
+              <Phone size={16} strokeWidth={1.2} style={{ color: "var(--champagne-hex)" }} />
               (62) 9609-3076
             </a>
-            <div className="flex items-center gap-3 text-sm text-primary-foreground/80">
-              <MapPin className="w-4 h-4" />
+            <div className="flex items-center gap-3" style={{ fontSize: "0.8rem", color: "rgba(255,255,255,0.6)" }}>
+              <MapPin size={16} strokeWidth={1.2} style={{ color: "var(--champagne-hex)" }} />
               Goiânia, GO
             </div>
-          </motion.div>
+          </div>
 
-          {/* CRM and Ethics */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="text-right"
-          >
-            <p className="text-sm text-primary-foreground/70">CRM-GO 27286</p>
-            <p className="text-xs text-primary-foreground/50 mt-2 max-w-xs ml-auto">
+          <div className="md:text-right">
+            <p style={{ fontSize: "0.68rem", color: "rgba(255,255,255,0.3)" }}>CRM-GO 27286</p>
+            <p
+              style={{
+                fontSize: "0.67rem",
+                color: "rgba(255,255,255,0.25)",
+                lineHeight: 1.6,
+                marginTop: 8,
+                maxWidth: 320,
+                marginLeft: "auto",
+              }}
+            >
               Este material tem caráter informativo. Os resultados podem variar de pessoa
               para pessoa. Consulte sempre um profissional qualificado.
             </p>
-          </motion.div>
+          </div>
         </div>
 
-        <div className="border-t border-primary-foreground/10 mt-8 pt-8">
-          <p className="text-center text-xs text-primary-foreground/50">
+        <div
+          style={{
+            borderTop: "1px solid rgba(255,255,255,0.07)",
+            marginTop: 40,
+            paddingTop: 20,
+          }}
+        >
+          <p style={{ fontSize: "0.68rem", color: "rgba(255,255,255,0.2)", textAlign: "center" }}>
             © {new Date().getFullYear()} Dra. Isabella Rodrigues Tovar. Todos os direitos reservados.
           </p>
         </div>

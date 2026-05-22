@@ -1,157 +1,235 @@
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
-import { useRef } from "react";
-import { GraduationCap, Heart, Award, UserCheck } from "lucide-react";
+import { useState } from "react";
+import { GraduationCap, Heart, Award, UserCheck, Plus, Minus } from "lucide-react";
 import doctorImage from "@/assets/doctor-portrait.jpg";
 
-const credentials = [
+const pillars = [
   {
     icon: GraduationCap,
-    title: "Foco na Saúde da Mulher",
-    description: "Médica com pós-graduação em Ginecologia e Obstetrícia (não especialista)",
+    title: "Foco na saúde da mulher",
+    text: "Médica com pós-graduação em Ginecologia e Obstetrícia (não especialista).",
   },
   {
     icon: Heart,
     title: "Estética íntima e corporal",
-    description: "Experiência consolidada em estética íntima feminina e corporal",
+    text: "Experiência consolidada em estética íntima feminina e corporal.",
   },
   {
     icon: Award,
-    title: "Tratamento Exclusivo",
-    description: "Uma das poucas médicas do Brasil que dominam a técnica FFSculpt",
+    title: "Tratamento exclusivo",
+    text: "Uma das poucas médicas do Brasil que dominam a técnica FFSculpt.",
   },
   {
     icon: UserCheck,
     title: "Tratamento integral",
-    description: "Tratamento personalizado avaliando a necessidade do paciente e com indicação individual",
+    text: "Avaliação individual e indicação personalizada para cada paciente.",
   },
 ];
 
+const accordionGroups = [
+  {
+    title: "Saúde da Mulher",
+    items: [
+      "Consulta de rotina",
+      "Prevenção",
+      "Climatério · Menopausa",
+      "Síndrome dos Ovários Policísticos",
+      "Endometriose",
+    ],
+  },
+  {
+    title: "Hormônios e Anticoncepção",
+    items: [
+      "Reposição Hormonal",
+      "Implantes Hormonais",
+      "Terapia Injetável",
+      "Inserção de DIU",
+      "Implanon",
+      "Emagrecimento",
+    ],
+  },
+  {
+    title: "Estética e Harmonização",
+    items: [
+      "FFSculpt · Criolipólise",
+      "Enzimas Corporais",
+      "Estética Íntima e Funcional",
+    ],
+  },
+];
+
+const credChips = [
+  "Foco na saúde da mulher",
+  "Estética íntima e corporal",
+  "Técnica FFSculpt",
+  "Tratamento personalizado",
+];
+
 const DoctorSection = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const [openIdx, setOpenIdx] = useState<number | null>(0);
 
   return (
-    <section ref={ref} className="section-padding bg-gradient-hero">
-      <div className="container-wide">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Image */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8 }}
-            className="relative order-2 lg:order-1"
-          >
-            <div className="relative">
-              <div className="absolute -inset-4 bg-secondary/50 rounded-3xl blur-2xl my-0" />
-              <div className="relative rounded-2xl overflow-hidden shadow-elegant">
-                <img
-                  src={doctorImage}
-                  alt="Dra. Isabella Rodrigues Tovar"
-                  className="w-full aspect-[3/4] object-center mt-0 mb-0 my-[2px] object-scale-down"
-                />
-              </div>
-              
-              {/* Name Badge */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ delay: 0.5, duration: 0.5 }}
-                className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-card px-6 py-3 rounded-xl shadow-medium border border-border/50"
+    <>
+      {/* Pillars */}
+      <section className="section-padding bg-champagne-light">
+        <div className="container-wide">
+          <div className="max-w-2xl fade-up">
+            <span className="eyebrow">Quatro pilares</span>
+            <h2 className="heading-section mt-3">
+              Por que tratar com a <em>Dra. Isabella</em>?
+            </h2>
+            <div className="hairline" />
+          </div>
+
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-[14px] lg:gap-[18px] mt-10">
+            {pillars.map((p) => (
+              <div
+                key={p.title}
+                className="card-soft card-soft-hover fade-up"
+                style={{ padding: "22px 18px" }}
               >
-                <p className="font-display font-semibold text-foreground text-center">
-                  Dra. Isabella Rodrigues Tovar
+                <p.icon
+                  strokeWidth={1.2}
+                  style={{
+                    width: 32,
+                    height: 32,
+                    color: "var(--champagne-hex)",
+                    marginBottom: 14,
+                  }}
+                />
+                <h3
+                  className="font-display"
+                  style={{
+                    fontSize: "1.1rem",
+                    fontWeight: 500,
+                    lineHeight: 1.3,
+                    marginBottom: 7,
+                  }}
+                >
+                  {p.title}
+                </h3>
+                <p style={{ fontSize: "0.77rem", color: "var(--text-secondary-hex)", lineHeight: 1.65 }}>
+                  {p.text}
                 </p>
-                <p className="text-xs text-muted-foreground text-center mt-1">
-                  Saúde, Beleza e Vitalidade
-                </p>
-              </motion.div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Doctor profile + accordion */}
+      <section className="section-padding bg-cream">
+        <div className="container-wide grid md:grid-cols-2 gap-14 items-center">
+          {/* Photo */}
+          <div
+            className="relative fade-up overflow-hidden"
+            style={{
+              borderRadius: 16,
+              aspectRatio: "3 / 4",
+            }}
+          >
+            <img
+              src={doctorImage}
+              alt="Dra. Isabella Rodrigues Tovar"
+              className="w-full h-full"
+              style={{ objectFit: "cover", objectPosition: "center top" }}
+            />
+            <div className="name-badge">
+              <div className="name">Dra. Isabella Rodrigues Tovar</div>
+              <div className="crm">CRM-GO 27286</div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Content */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8 }}
-            className="space-y-8 order-1 lg:order-2"
-          >
-            <div>
-              <span className="text-accent font-medium text-sm uppercase tracking-wider">
-                Sua médica
-              </span>
-              <h2 className="heading-section mt-4">
-                Por que fazer com a Dra. Isabella?
-              </h2>
-              <div className="divider-elegant !mx-0 !my-6" />
-              <p className="text-elegant">
-                Combinando formação médica rigorosa com sensibilidade para as necessidades
-                femininas, a Dra. Isabella oferece uma experiência de tratamento que vai
-                além da estética — cuidando de você de forma integral.
-              </p>
-            </div>
+          <div className="fade-up">
+            <span className="eyebrow">Sua médica</span>
+            <h2 className="heading-section mt-3">
+              Cuidado integral, com olhar <em>feminino</em>.
+            </h2>
+            <div className="hairline" />
+            <p className="text-elegant">
+              Combinando formação médica rigorosa com sensibilidade para as necessidades
+              femininas, a Dra. Isabella oferece uma experiência de tratamento que vai
+              além da estética — cuidando de você de forma integral.
+            </p>
 
-            <div className="grid sm:grid-cols-2 gap-4">
-              {credentials.map((credential, index) => (
-                <motion.div
-                  key={credential.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={isInView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
-                  className="flex gap-4 p-4 bg-card/50 rounded-xl border border-border/30"
-                >
-                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <credential.icon className="w-5 h-5 text-primary" />
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-foreground text-sm mb-1">
-                      {credential.title}
-                    </h4>
-                    <p className="text-xs text-muted-foreground leading-relaxed">
-                      {credential.description}
-                    </p>
-                  </div>
-                </motion.div>
+            <ul className="mt-6 space-y-2">
+              {credChips.map((c) => (
+                <li key={c} className="flex items-center gap-3">
+                  <span
+                    style={{
+                      width: 5,
+                      height: 5,
+                      borderRadius: 999,
+                      backgroundColor: "var(--champagne-hex)",
+                      flexShrink: 0,
+                    }}
+                  />
+                  <span style={{ fontSize: "0.81rem", color: "var(--text-secondary-hex)" }}>
+                    {c}
+                  </span>
+                </li>
               ))}
-            </div>
+            </ul>
 
-            {/* Services List */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.7 }}
-              className="p-6 bg-card/50 rounded-xl border border-border/30"
-            >
-              <p className="text-muted-foreground mb-4">
-                A Dra. Isabella oferece um cuidado integral à mulher em todas as suas fases.
-              </p>
-              <ul className="grid sm:grid-cols-2 gap-2">
-                {[
-                  "Consulta de rotina",
-                  "Prevenção",
-                  "Climatério/Menopausa",
-                  "Síndrome dos ovários policísticos",
-                  "Endometriose",
-                  "Emagrecimento",
-                  "Inserção de DIU",
-                  "Inserção de Implanon",
-                  "Reposição Hormonal",
-                  "Implantes Hormonais",
-                  "Terapia Injetável",
-                  "Harmonização corporal: FFSCULPT e enzimas",
-                  "Tratamento íntimo: estético e funcional",
-                ].map((service) => (
-                  <li key={service} className="flex items-center gap-2 text-sm text-muted-foreground">
-                    <span className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0" />
-                    {service}
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-          </motion.div>
+            {/* Accordion of all services */}
+            <div className="mt-10" style={{ borderTop: "1px solid var(--border-hex)" }}>
+              <p className="eyebrow mt-5 mb-2">Todos os atendimentos</p>
+              {accordionGroups.map((g, i) => {
+                const open = openIdx === i;
+                return (
+                  <div
+                    key={g.title}
+                    style={{ borderBottom: "1px solid var(--border-hex)" }}
+                  >
+                    <button
+                      type="button"
+                      onClick={() => setOpenIdx(open ? null : i)}
+                      className="w-full flex items-center justify-between text-left"
+                      style={{ padding: "18px 0", background: "transparent", border: 0 }}
+                    >
+                      <span style={{ fontSize: "0.88rem", fontWeight: 500, color: "var(--text-primary-hex)" }}>
+                        {g.title}
+                      </span>
+                      {open ? (
+                        <Minus size={18} style={{ color: "var(--champagne-hex)" }} />
+                      ) : (
+                        <Plus size={18} style={{ color: "var(--champagne-hex)" }} />
+                      )}
+                    </button>
+                    <div
+                      style={{
+                        overflow: "hidden",
+                        maxHeight: open ? 400 : 0,
+                        paddingBottom: open ? 18 : 0,
+                        transition: "max-height 0.35s ease, padding-bottom 0.35s ease",
+                      }}
+                    >
+                      <div className="flex flex-wrap gap-[7px]">
+                        {g.items.map((it) => (
+                          <span
+                            key={it}
+                            style={{
+                              fontSize: "0.74rem",
+                              color: "var(--text-secondary-hex)",
+                              border: "1px solid var(--border-hex)",
+                              borderRadius: 100,
+                              padding: "5px 13px",
+                              background: "var(--cream-hex)",
+                            }}
+                          >
+                            {it}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 
