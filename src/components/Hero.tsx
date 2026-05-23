@@ -15,24 +15,18 @@ const Hero = () => {
         <img
           src={heroBg}
           alt="Ilustração Método FFSculpt"
-          className="w-full block"
+          className="hero-illustration w-full block"
           style={{
-            height: "65vw",
             objectFit: "cover",
             objectPosition: "center top",
           }}
         />
         <style>{`
+          .hero-illustration { height: 65vw; }
           @media (min-width: 768px) {
-            .hero-illustration { height: 55vh !important; }
+            .hero-illustration { height: 55vh; }
           }
         `}</style>
-        <img
-          src={heroBg}
-          aria-hidden="true"
-          className="hero-illustration"
-          style={{ display: "none" }}
-        />
         <div
           className="absolute inset-x-0 bottom-0 pointer-events-none"
           style={{
