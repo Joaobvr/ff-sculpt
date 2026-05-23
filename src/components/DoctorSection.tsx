@@ -25,25 +25,39 @@ const pillars = [
   },
 ];
 
-const allServices = [
-  "Foco na saúde da mulher",
-  "Estética íntima e corporal",
-  "Técnica FFSculpt",
-  "Tratamento personalizado",
-  "Consulta de rotina",
-  "Prevenção",
-  "Climatério · Menopausa",
-  "Síndrome dos Ovários Policísticos",
-  "Endometriose",
-  "Emagrecimento",
-  "Inserção de DIU",
-  "Implanon",
-  "Reposição Hormonal",
-  "Implantes Hormonais",
-  "Terapia Injetável",
-  "FFSculpt · Criolipólise",
-  "Enzimas Corporais",
-  "Estética Íntima e Funcional",
+const serviceGroups: { title: string; items: { label: string; full?: boolean }[] }[] = [
+  {
+    title: "Saúde Feminina",
+    items: [
+      { label: "Consulta de rotina" },
+      { label: "Prevenção" },
+      { label: "Climatério · Menopausa" },
+      { label: "Endometriose" },
+      { label: "Síndrome dos Ovários Policísticos", full: true },
+    ],
+  },
+  {
+    title: "Hormônios & Bem-estar",
+    items: [
+      { label: "Reposição Hormonal" },
+      { label: "Implantes Hormonais" },
+      { label: "Terapia Injetável" },
+      { label: "Inserção de DIU" },
+      { label: "Implanon" },
+      { label: "Emagrecimento" },
+      { label: "Tratamento personalizado", full: true },
+    ],
+  },
+  {
+    title: "Estética & Harmonização",
+    items: [
+      { label: "FFSculpt · Criolipólise" },
+      { label: "Enzimas Corporais" },
+      { label: "Estética Íntima e Corporal" },
+      { label: "Estética Íntima e Funcional" },
+      { label: "Harmonização Corporal", full: true },
+    ],
+  },
 ];
 
 const DoctorSection = () => {
@@ -176,27 +190,56 @@ const DoctorSection = () => {
               <div
                 style={{
                   overflow: "hidden",
-                  maxHeight: servicesOpen ? 600 : 0,
-                  paddingTop: servicesOpen ? 20 : 0,
-                  paddingBottom: servicesOpen ? 20 : 0,
+                  maxHeight: servicesOpen ? 1200 : 0,
                   transition: "max-height 0.4s ease, padding 0.4s ease",
                 }}
               >
-                <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
-                  {allServices.map((s) => (
-                    <span
-                      key={s}
-                      style={{
-                        fontSize: "0.82rem",
-                        color: "var(--text-secondary-hex)",
-                        border: "1px solid var(--border-hex)",
-                        borderRadius: 100,
-                        padding: "5px 14px",
-                        background: "var(--warm-white-hex)",
-                      }}
-                    >
-                      {s}
-                    </span>
+                <div style={{ display: "flex", flexDirection: "column", gap: 28, paddingTop: 22 }}>
+                  {serviceGroups.map((group) => (
+                    <div key={group.title}>
+                      <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 14 }}>
+                        <span
+                          style={{
+                            fontSize: "0.62rem",
+                            fontWeight: 500,
+                            letterSpacing: "0.22em",
+                            textTransform: "uppercase",
+                            color: "var(--champagne-hex)",
+                            whiteSpace: "nowrap",
+                          }}
+                        >
+                          {group.title}
+                        </span>
+                        <div style={{ flex: 1, height: 1, background: "var(--champagne-line-hex)" }} />
+                      </div>
+                      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px 16px" }}>
+                        {group.items.map((item) => (
+                          <span
+                            key={item.label}
+                            style={{
+                              display: "flex",
+                              alignItems: "center",
+                              gap: 8,
+                              fontSize: "0.9rem",
+                              color: "var(--text-secondary-hex)",
+                              lineHeight: 1.4,
+                              gridColumn: item.full ? "span 2" : undefined,
+                            }}
+                          >
+                            <span
+                              style={{
+                                width: 4,
+                                height: 4,
+                                borderRadius: "50%",
+                                background: "var(--marsala-hex, #9B7178)",
+                                flexShrink: 0,
+                              }}
+                            />
+                            {item.label}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
                   ))}
                 </div>
               </div>
