@@ -20,7 +20,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3"
-              style={{ fontSize: "0.8rem", color: "rgba(255,255,255,0.6)" }}
+              style={{ fontSize: "0.85rem", color: "rgba(255,255,255,0.6)" }}
             >
               <Instagram size={16} strokeWidth={1.2} style={{ color: "var(--champagne-hex)" }} />
               @isabellarodriguestovar
@@ -28,12 +28,12 @@ const Footer = () => {
             <a
               href="tel:+5562996093076"
               className="flex items-center gap-3"
-              style={{ fontSize: "0.8rem", color: "rgba(255,255,255,0.6)" }}
+              style={{ fontSize: "0.85rem", color: "rgba(255,255,255,0.6)" }}
             >
               <Phone size={16} strokeWidth={1.2} style={{ color: "var(--champagne-hex)" }} />
               (62) 9609-3076
             </a>
-            <div className="flex items-center gap-3" style={{ fontSize: "0.8rem", color: "rgba(255,255,255,0.6)" }}>
+            <div className="flex items-center gap-3" style={{ fontSize: "0.85rem", color: "rgba(255,255,255,0.6)" }}>
               <MapPin size={16} strokeWidth={1.2} style={{ color: "var(--champagne-hex)" }} />
               Goiânia, GO
             </div>
