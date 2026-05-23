@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { GraduationCap, Heart, Award, UserCheck, Plus, Minus } from "lucide-react";
+import { GraduationCap, Heart, Award, UserCheck } from "lucide-react";
 import doctorImage from "@/assets/doctor-portrait.jpg";
 
 const pillars = [
