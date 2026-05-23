@@ -45,7 +45,15 @@ const Hero = () => {
             com o <em>Método FFSculpt.</em>
           </h1>
           <div className="hairline" />
-          <p className="text-elegant mb-7 max-w-lg">
+          <p
+            className="text-elegant mb-7"
+            style={{
+              textWrap: "pretty",
+              maxWidth: 480,
+              lineHeight: 1.65,
+              fontSize: "1rem",
+            }}
+          >
             Dra. Isabella Tovar é uma das médicas do Brasil que oferece a metodologia
             não invasiva que vem obtendo resultados incríveis na eliminação de gordura
             localizada, redução de medidas, tratamento de lipedema e retração de pele:
