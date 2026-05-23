@@ -89,7 +89,7 @@ const DoctorSection = () => {
                 >
                   {p.title}
                 </h3>
-                <p style={{ fontSize: "0.77rem", color: "var(--text-secondary-hex)", lineHeight: 1.65 }}>
+                <p style={{ fontSize: "0.9rem", color: "var(--text-secondary-hex)", lineHeight: 1.65 }}>
                   {p.text}
                 </p>
               </div>
@@ -187,7 +187,7 @@ const DoctorSection = () => {
                     <span
                       key={s}
                       style={{
-                        fontSize: "0.74rem",
+                        fontSize: "0.82rem",
                         color: "var(--text-secondary-hex)",
                         border: "1px solid var(--border-hex)",
                         borderRadius: 100,

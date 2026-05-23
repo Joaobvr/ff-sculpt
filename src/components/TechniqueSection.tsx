@@ -106,7 +106,7 @@ const TechniqueSection = () => {
                 >
                   {s.title}
                 </h4>
-                <p style={{ fontSize: "0.8rem", color: "var(--text-secondary-hex)", lineHeight: 1.7 }}>
+                <p style={{ fontSize: "0.9rem", color: "var(--text-secondary-hex)", lineHeight: 1.7 }}>
                   {s.text}
                 </p>
               </div>
