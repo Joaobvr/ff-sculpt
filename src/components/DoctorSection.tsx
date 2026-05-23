@@ -25,47 +25,29 @@ const pillars = [
   },
 ];
 
-const accordionGroups = [
-  {
-    title: "Saúde da Mulher",
-    items: [
-      "Consulta de rotina",
-      "Prevenção",
-      "Climatério · Menopausa",
-      "Síndrome dos Ovários Policísticos",
-      "Endometriose",
-    ],
-  },
-  {
-    title: "Hormônios e Anticoncepção",
-    items: [
-      "Reposição Hormonal",
-      "Implantes Hormonais",
-      "Terapia Injetável",
-      "Inserção de DIU",
-      "Implanon",
-      "Emagrecimento",
-    ],
-  },
-  {
-    title: "Estética e Harmonização",
-    items: [
-      "FFSculpt · Criolipólise",
-      "Enzimas Corporais",
-      "Estética Íntima e Funcional",
-    ],
-  },
-];
-
-const credChips = [
+const allServices = [
   "Foco na saúde da mulher",
   "Estética íntima e corporal",
   "Técnica FFSculpt",
   "Tratamento personalizado",
+  "Consulta de rotina",
+  "Prevenção",
+  "Climatério · Menopausa",
+  "Síndrome dos Ovários Policísticos",
+  "Endometriose",
+  "Emagrecimento",
+  "Inserção de DIU",
+  "Implanon",
+  "Reposição Hormonal",
+  "Implantes Hormonais",
+  "Terapia Injetável",
+  "FFSculpt · Criolipólise",
+  "Enzimas Corporais",
+  "Estética Íntima e Funcional",
 ];
 
 const DoctorSection = () => {
-  const [openIdx, setOpenIdx] = useState<number | null>(0);
+  const [servicesOpen, setServicesOpen] = useState(false);
 
   return (
     <>
@@ -152,79 +134,72 @@ const DoctorSection = () => {
               além da estética — cuidando de você de forma integral.
             </p>
 
-            <ul className="mt-6 space-y-2">
-              {credChips.map((c) => (
-                <li key={c} className="flex items-center gap-3">
-                  <span
-                    style={{
-                      width: 5,
-                      height: 5,
-                      borderRadius: 999,
-                      backgroundColor: "var(--champagne-hex)",
-                      flexShrink: 0,
-                    }}
-                  />
-                  <span style={{ fontSize: "0.81rem", color: "var(--text-secondary-hex)" }}>
-                    {c}
-                  </span>
-                </li>
-              ))}
-            </ul>
-
-            {/* Accordion of all services */}
-            <div className="mt-10" style={{ borderTop: "1px solid var(--border-hex)" }}>
-              <p className="eyebrow mt-5 mb-2">Todos os atendimentos</p>
-              {accordionGroups.map((g, i) => {
-                const open = openIdx === i;
-                return (
-                  <div
-                    key={g.title}
-                    style={{ borderBottom: "1px solid var(--border-hex)" }}
-                  >
-                    <button
-                      type="button"
-                      onClick={() => setOpenIdx(open ? null : i)}
-                      className="w-full flex items-center justify-between text-left"
-                      style={{ padding: "18px 0", background: "transparent", border: 0 }}
-                    >
-                      <span style={{ fontSize: "0.88rem", fontWeight: 500, color: "var(--text-primary-hex)" }}>
-                        {g.title}
-                      </span>
-                      {open ? (
-                        <Minus size={18} style={{ color: "var(--champagne-hex)" }} />
-                      ) : (
-                        <Plus size={18} style={{ color: "var(--champagne-hex)" }} />
-                      )}
-                    </button>
-                    <div
+            <div style={{ marginTop: 32 }}>
+              <button
+                type="button"
+                onClick={() => setServicesOpen((v) => !v)}
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: 8,
+                  background: "transparent",
+                  border: 0,
+                  padding: 0,
+                  paddingBottom: 4,
+                  cursor: "pointer",
+                  fontFamily: "var(--font-body)",
+                  fontSize: "0.68rem",
+                  fontWeight: 500,
+                  letterSpacing: "0.2em",
+                  textTransform: "uppercase",
+                  color: "var(--champagne-hex)",
+                  borderBottom: "1px solid var(--champagne-line-hex)",
+                }}
+              >
+                Todos os atendimentos
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                  style={{
+                    transition: "transform 0.3s ease",
+                    flexShrink: 0,
+                    transform: servicesOpen ? "rotate(180deg)" : "rotate(0deg)",
+                  }}
+                >
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </button>
+              <div
+                style={{
+                  overflow: "hidden",
+                  maxHeight: servicesOpen ? 600 : 0,
+                  paddingTop: servicesOpen ? 20 : 0,
+                  paddingBottom: servicesOpen ? 20 : 0,
+                  transition: "max-height 0.4s ease, padding 0.4s ease",
+                }}
+              >
+                <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+                  {allServices.map((s) => (
+                    <span
+                      key={s}
                       style={{
-                        overflow: "hidden",
-                        maxHeight: open ? 400 : 0,
-                        paddingBottom: open ? 18 : 0,
-                        transition: "max-height 0.35s ease, padding-bottom 0.35s ease",
+                        fontSize: "0.74rem",
+                        color: "var(--text-secondary-hex)",
+                        border: "1px solid var(--border-hex)",
+                        borderRadius: 100,
+                        padding: "5px 14px",
+                        background: "var(--warm-white-hex)",
                       }}
                     >
-                      <div className="flex flex-wrap gap-[7px]">
-                        {g.items.map((it) => (
-                          <span
-                            key={it}
-                            style={{
-                              fontSize: "0.74rem",
-                              color: "var(--text-secondary-hex)",
-                              border: "1px solid var(--border-hex)",
-                              borderRadius: 100,
-                              padding: "5px 13px",
-                              background: "var(--cream-hex)",
-                            }}
-                          >
-                            {it}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
+                      {s}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
