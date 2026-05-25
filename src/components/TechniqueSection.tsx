@@ -2,7 +2,7 @@ const steps = [
   {
     n: "01",
     title: "Avaliação médica detalhada",
-    text: "Análise clínica individual para entender seu corpo, suas metas e a indicação correta do tratamento.",
+    text: "Avaliação clínica individual para entender seu corpo, suas metas e a indicação da estratégia correta de tratamento.",
   },
   {
     n: "02",
