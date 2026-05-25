@@ -21,7 +21,7 @@ const pillars = [
   {
     icon: UserCheck,
     title: "Tratamento Integral",
-    text: "Além do tratamento estético, cuida de seu organismo de forma integral, buscando equilibrio metabólico e hormonal.",
+    text: "Entende que o equilibrio metabólico, hormonal, intestinal e nutricional são pilares de um organismo com saúde, vitalidade e beleza.",
   },
 ];
 
