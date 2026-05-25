@@ -33,10 +33,16 @@ const Footer = () => {
               <Phone size={16} strokeWidth={1.2} style={{ color: "var(--champagne-hex)" }} />
               (62) 9609-3076
             </a>
-            <div className="flex items-center gap-3" style={{ fontSize: "0.85rem", color: "rgba(255,255,255,0.6)" }}>
+            <a
+              href="https://maps.app.goo.gl/2z6Eb8nwUMcMJgFE8"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3"
+              style={{ fontSize: "0.85rem", color: "rgba(255,255,255,0.6)" }}
+            >
               <MapPin size={16} strokeWidth={1.2} style={{ color: "var(--champagne-hex)" }} />
-              Goiânia, GO
-            </div>
+              Clinica Vizz | Setor Marista
+            </a>
           </div>
 
           <div className="md:text-right">
