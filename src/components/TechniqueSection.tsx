@@ -136,7 +136,7 @@ const TechniqueSection = () => {
             Acesso restrito
           </div>
           <h3 className="heading-section">
-            Em Goiânia, apenas <span style={{ fontWeight: 500, color: "var(--text-primary-hex)" }}>três médicas</span> credenciadas.
+            Em Goiânia, apenas <span style={{ fontWeight: 500, color: "var(--text-primary-hex)" }}>duas médicas</span> credenciadas.
           </h3>
           <p className="text-elegant mt-4 max-w-xl mx-auto">
             A Dra. Isabella é uma delas. A exclusividade da técnica e os resultados

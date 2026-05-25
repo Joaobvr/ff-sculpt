@@ -59,12 +59,14 @@ const Hero = () => {
             localizada, redução de medidas, tratamento de lipedema e retração de pele:
             o método FF Sculpt.
           </p>
-          <button onClick={scrollToForm} className="btn-primary">
-            Quero minha pré-avaliação
-          </button>
-          <p className="text-tertiary-ink" style={{ fontSize: "0.72rem", marginTop: 22 }}>
-            Avaliação médica · Sem cortes · Sem cicatrizes
-          </p>
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+            <button onClick={scrollToForm} className="btn-primary">
+              Quero minha pré-avaliação
+            </button>
+            <p className="text-tertiary-ink" style={{ fontSize: "0.72rem", marginTop: 22, textAlign: "center" }}>
+              Avaliação médica · Sem cortes · Sem cicatrizes
+            </p>
+          </div>
         </div>
       </div>
     </section>
