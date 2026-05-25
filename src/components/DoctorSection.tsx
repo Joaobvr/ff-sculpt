@@ -33,7 +33,7 @@ const serviceGroups: { title: string; items: { label: string; full?: boolean }[]
       { label: "Prevenção" },
       { label: "Climatério · Menopausa" },
       { label: "Endometriose" },
-      { label: "Síndrome dos Ovários Policísticos", full: true },
+      { label: "SOMP (Síndrome Ovariana Metabólica Poliendócrina)", full: true },
     ],
   },
   {
