@@ -9,8 +9,11 @@ const Footer = () => {
             <div className="font-display" style={{ fontSize: "1.15rem", color: "#fff" }}>
               Dra. Isabella <span style={{ fontStyle: "italic", color: "var(--champagne-hex)" }}>Tovar</span>
             </div>
+            <p style={{ fontSize: "0.74rem", color: "rgba(255,255,255,0.6)", marginTop: 6 }}>
+              Médica | CRM: 27286 GO
+            </p>
             <p style={{ fontSize: "0.74rem", color: "var(--champagne-hex)", marginTop: 6 }}>
-              Saúde, Beleza e Vitalidade
+              Saúde, Longevidade e Beleza
             </p>
           </div>
 
