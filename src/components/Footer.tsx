@@ -49,7 +49,6 @@ const Footer = () => {
           </div>
 
           <div className="md:text-right">
-            <p style={{ fontSize: "0.68rem", color: "rgba(255,255,255,0.3)" }}>CRM-GO 27286</p>
             <p
               style={{
                 fontSize: "0.67rem",
