@@ -12,7 +12,7 @@ const steps = [
   {
     n: "03",
     title: "Aplicação da crioterapia FFSculpt",
-    text: "Técnica patenteada que induz a apoptose das células de gordura sem cortes e sem cicatrizes.",
+    text: "Técnica patenteada de aplicação de criolipólise que induz a apoptose das células de gordura gerando eliminação progressiva e definitiva.",
   },
   {
     n: "04",
