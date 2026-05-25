@@ -7,7 +7,7 @@ const steps = [
   {
     n: "02",
     title: "Preparação do tecido adiposo",
-    text: "Protocolo proprietário que prepara seu corpo e o tecido adiposo para potencializar os resultados.",
+    text: "Protocolo que prepara seu corpo e o tecido adiposo para potencializar os resultados das tecnologias.",
   },
   {
     n: "03",
