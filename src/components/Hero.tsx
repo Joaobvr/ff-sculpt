@@ -52,6 +52,8 @@ const Hero = () => {
               maxWidth: 480,
               lineHeight: 1.65,
               fontSize: "1rem",
+              textAlign: "justify",
+              hyphens: "auto",
             }}
           >
             Dra. Isabella Tovar é uma das médicas do Brasil que oferece a metodologia
