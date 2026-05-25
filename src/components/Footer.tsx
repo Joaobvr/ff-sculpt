@@ -16,14 +16,14 @@ const Footer = () => {
 
           <div className="space-y-3">
             <a
-              href="https://instagram.com/isabellarodriguestovar"
+              href="https://instagram.com/dra.isabellatovar"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3"
               style={{ fontSize: "0.85rem", color: "rgba(255,255,255,0.6)" }}
             >
               <Instagram size={16} strokeWidth={1.2} style={{ color: "var(--champagne-hex)" }} />
-              @isabellarodriguestovar
+              @dra.isabellatovar
             </a>
             <a
               href="tel:+5562996093076"
