@@ -51,11 +51,10 @@ const serviceGroups: { title: string; items: { label: string; full?: boolean }[]
   {
     title: "Estética & Harmonização",
     items: [
-      { label: "FFSculpt · Criolipólise" },
-      { label: "Enzimas Corporais" },
-      { label: "Estética Íntima e Corporal" },
-      { label: "Estética Íntima e Funcional" },
-      { label: "Harmonização Corporal", full: true },
+      { label: "FFSculpt · Corporal | Facial | Íntimo", full: true },
+      { label: "Harmonização Íntima - Estética e Funcional", full: true },
+      { label: "Tecnologias | Enzimas | Peptídeos | Injetáveis", full: true },
+      { label: "Gordura Localizada | Flacidez | Lipedema", full: true },
     ],
   },
 ];
