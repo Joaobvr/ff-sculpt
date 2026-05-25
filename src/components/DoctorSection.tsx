@@ -20,8 +20,8 @@ const pillars = [
   },
   {
     icon: UserCheck,
-    title: "Tratamento integral",
-    text: "Avaliação individual e indicação personalizada para cada paciente.",
+    title: "Tratamento Integral",
+    text: "Além do tratamento estético, cuida de seu organismo de forma integral, buscando equilibrio metabólico e hormonal.",
   },
 ];
 
