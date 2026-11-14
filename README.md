@@ -1,73 +1,97 @@
-# Welcome to your Lovable project
+# FF sculpt
 
-## Project info
+Quero que você construa uma landing page completa, premium, elegante e altamente persuasiva, para uma médica chamada Dra. Isabella Rodrigues Tovar.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+A página deve seguir princípios de copywriting de alta conversão (Atenção – Interesse – Desejo – Ação), usando linguagem acessível, segura e ética, com foco em agendamento de criolipólise feita em uma técnica exclusiva e patenteada, da qual a Dra. Isabella é uma das duas únicas médicas credenciadas em Goiânia.
 
-## How can I edit this code?
+Use uma identidade visual suave, sofisticada e feminina: verde oliva + rosé + marsala, mantendo estética clean e profissional.
 
-There are several ways of editing your application.
+SEÇÕES OBRIGATÓRIAS DA LANDING PAGE
 
-**Use Lovable**
+1. HERO (Topo da página – acima da dobra)
+Título:
+"Redefina suas curvas com segurança médica e a técnica de criolipólise mais avançada do Brasil — agora disponível em Goiânia."
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+Subtítulo:
+“Dra. Isabella Tovar agora oferece a técnica patenteada de criolipólise que já transformou os resultados de milhares de mulheres no país — e você pode garantir sua primeira sessão antes mesmo da chegada da nova máquina.”
 
-Changes made via Lovable will be committed automatically to this repo.
+Botão CTA:
+“QUERO MINHA PRÉ-AVALIAÇÃO”
 
-**Use your preferred IDE**
+2. O QUE É ESSA TÉCNICA EXCLUSIVA DE CRIOLIPÓLISE?
+Criar texto explicativo destacando:
+- Técnica patenteada e única no Brasil
+- Resultados mais eficientes em gordura localizada
+- Segurança ampliada por ser realizada por médica
+- Evidências científicas
+- Alta demanda nacional
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+3. POR QUE FAZER COM A DRA. ISABELLA?
+- Médica formada, pós-graduação em gineco e saúde da mulher
+- Experiência em estética íntima e corporal
+- Uma das únicas médicas credenciadas na técnica em Goiânia
+- Abordagem premium e personalizada
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+4. ANTES E DEPOIS
+Criar galeria para 6 imagens com título:
+“Resultados reais obtidos com a técnica usada pela Dra. Isabella e colegas credenciados.”
 
-Follow these steps:
+CTA:
+“QUERO MINHA PRÉ-AVALIAÇÃO”
+
+5. COMO FUNCIONA O PROCESSO?
+1. Pré-avaliação online
+2. Contato pelo WhatsApp
+3. Consulta e mensuração
+4. Sessão de criolipólise com protocolo exclusivo
+5. Acompanhamento para potencializar resultados
+
+6. AVISO IMPORTANTE
+- Alta demanda devido à exclusividade
+- Pré-agendamentos abertos antes da chegada da nova máquina
+- Vagas limitadas
+
+7. FORMULÁRIO DE PRÉ-AVALIAÇÃO
+Campos:
+- Nome
+- Idade
+- Telefone
+- Região a tratar
+- Histórico de criolipólise
+- Comorbidades
+- Objetivo
+- Melhor horário
+
+Redirecionamento pós-envio:
+Mensagem pronta no WhatsApp:
+“Olá! Acabei de preencher minha pré-avaliação para criolipólise com a Dra. Isabella. Quero agendar minha sessão.”
+
+8. RODAPÉ
+- Foto pequena da Dra.
+- @isabellarodriguestovar
+- Telefone/WhatsApp
+- CRM e aviso ético
+
+TONALIDADE:
+Premium, clean, acolhedora, profissional.
+
+This project was built with [Lovable](https://lovable.dev).
+
+## Build with Lovable
+
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/f75f39f6-2fa4-46ba-b06e-7bc86260c862).
+
+- **Ship faster**: describe what you want to build and Lovable handles the code.
+- **Stay in sync**: every change made in Lovable is committed straight to this repository.
+- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+
+## Development
+
+Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
+git clone <this-repository-url>
+cd <repository-name>
 npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
 npm run dev
 ```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
